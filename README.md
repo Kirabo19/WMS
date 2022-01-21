@@ -1,1 +1,1 @@
-# WMS
+Warehouse Management System (Python Django)
