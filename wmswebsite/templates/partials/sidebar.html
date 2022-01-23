@@ -1,0 +1,153 @@
+{% load static %}
+<div class="site-menubar-body">
+    <div>
+        <div>
+            <ul class="site-menu">
+                <li class="site-menu-category">Main-Menu</li>
+                <li class='site-menu-item'>
+                    <a href='http://localhost/wms/admin' class='animsition-link'>
+                        <i class='site-menu-icon fa fa-dashboard'></i>
+                        <span class='site-menu-title'>
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class='site-menu-item'>
+                    <a href='http://localhost/wms/website/identitas/edit/1' class='animsition-link'>
+                        <i class='site-menu-icon fa fa-cogs'></i>
+                        <span class='site-menu-title'>
+                        System Identity
+                        </span>
+                    </a>
+                </li>
+                <li class='site-menu-item has-sub'>
+                    <a href='javascript:void(0)' class='animsition-link'>
+                        <span class='site-menu-arrow'></span>
+                        <i class='site-menu-icon fa fa fa-users'></i>
+                        <span class='site-menu-title'>Master User</span>
+                    </a>
+                    <ul class='site-menu-sub'>
+                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/pengaturan/pengguna' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                    Admin & Staff
+                                </span>
+                            </a>
+                        </li>
+                                                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/supplier' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                    Supplier
+                                </span>
+                            </a>
+                        </li>
+                                                                                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/customer' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                    Customer
+                                </span>
+                            </a>
+                        </li>
+                                                    </ul>
+                </li>
+                <li class='site-menu-item'>
+                    <a href='http://localhost/wms/website/barang' class='animsition-link'>
+                        <i class='site-menu-icon fa fa-archive'></i>
+                        <span class='site-menu-title'>
+                        Master of Goods
+                        </span>
+                    </a>
+                </li>
+                <li class='site-menu-item'>
+                    <a href='http://localhost/wms/website/stock/edit/1' class='animsition-link'>
+                        <i class='site-menu-icon fa fa-bell'></i>
+                        <span class='site-menu-title'>
+                        Stock Notification
+                        </span>
+                    </a>
+                </li>
+                <li class='site-menu-item has-sub'>
+                    <a href='javascript:void(0)' class='animsition-link'>
+                        <span class='site-menu-arrow'></span>
+                        <i class='site-menu-icon fa fa fa-exchange'></i>
+                        <span class='site-menu-title'>Transaction</span>
+                    </a>
+                    <ul class='site-menu-sub'>
+                                                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/masuk' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                Incoming Goods
+                                </span>
+                            </a>
+                        </li>
+                                                                                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/keluar' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                Outgoing Goods
+                                </span>
+                            </a>
+                        </li>
+                                                                                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/penyesuaian' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                    Adjustment
+                                </span>
+                            </a>
+                        </li>
+                                                    </ul>
+                </li>
+                                        <li class='site-menu-item has-sub'>
+                    <a href='javascript:void(0)' class='animsition-link'>
+                        <span class='site-menu-arrow'></span>
+                        <i class='site-menu-icon fa fa fa-bar-chart'></i>
+                        <span class='site-menu-title'>Report</span>
+                    </a>
+                    <ul class='site-menu-sub'>
+                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/laporanmasuk' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                Incoming Goods
+                                </span>
+                            </a>
+                        </li>
+                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/laporankeluar' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                Outgoing Goods
+                                </span>
+                            </a>
+                        </li>
+                        <li class='site-menu-item'>
+                            <a href='http://localhost/wms/website/laporanpenyesuaian' class='animsition-link'>
+                                <i class='site-menu-icon fa fa-angle-right'></i>
+                                <span class='site-menu-title'>
+                                 Adjustment
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                                    </ul>
+
+        </div>
+    </div>
+</div>
+<div class="site-menubar-footer">
+    <a href="http://localhost/wms/admin" class="fold-show" data-placement="top" data-toggle="tooltip" data-original-title="Dashboard">
+        <span class="icon wb-home" aria-hidden="true"></span>
+    </a>
+    <a href="http://localhost/wms/pengaturan/edit_password" data-placement="top" data-toggle="tooltip" data-original-title="Edit Password">
+        <span class="icon wb-lock" aria-hidden="true"></span>
+    </a>
+    <a href="http://localhost/wms/login/keluar" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
+        <span class="icon wb-power" aria-hidden="true"></span>
+    </a>
+</div>

@@ -177,158 +177,7 @@
 	</nav>
 
 	<div class="site-menubar">
-		<div class="site-menubar-body">
-			<div>
-				<div>
-					<ul class="site-menu">
-						<li class="site-menu-category">Main-Menu</li>
-						<li class='site-menu-item'>
-							<a href='http://localhost/wms/admin' class='animsition-link'>
-								<i class='site-menu-icon fa fa-dashboard'></i>
-								<span class='site-menu-title'>
-									Dashboard
-								</span>
-							</a>
-						</li>
-						<li class='site-menu-item'>
-							<a href='http://localhost/wms/website/identitas/edit/1' class='animsition-link'>
-								<i class='site-menu-icon fa fa-cogs'></i>
-								<span class='site-menu-title'>
-								System Identity
-								</span>
-							</a>
-						</li>
-						<li class='site-menu-item has-sub'>
-							<a href='javascript:void(0)' class='animsition-link'>
-								<span class='site-menu-arrow'></span>
-								<i class='site-menu-icon fa fa fa-users'></i>
-								<span class='site-menu-title'>Master User</span>
-							</a>
-							<ul class='site-menu-sub'>
-								<li class='site-menu-item'>
-									<a href='http://localhost/wms/pengaturan/pengguna' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-											Admin & Staff
-										</span>
-									</a>
-								</li>
-																<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/supplier' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-											Supplier
-										</span>
-									</a>
-								</li>
-																								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/customer' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-											Customer
-										</span>
-									</a>
-								</li>
-															</ul>
-						</li>
-						<li class='site-menu-item'>
-							<a href='http://localhost/wms/website/barang' class='animsition-link'>
-								<i class='site-menu-icon fa fa-archive'></i>
-								<span class='site-menu-title'>
-								Master of Goods
-								</span>
-							</a>
-						</li>
-						<li class='site-menu-item'>
-							<a href='http://localhost/wms/website/stock/edit/1' class='animsition-link'>
-								<i class='site-menu-icon fa fa-bell'></i>
-								<span class='site-menu-title'>
-								Stock Notification
-								</span>
-							</a>
-						</li>
-						<li class='site-menu-item has-sub'>
-							<a href='javascript:void(0)' class='animsition-link'>
-								<span class='site-menu-arrow'></span>
-								<i class='site-menu-icon fa fa fa-exchange'></i>
-								<span class='site-menu-title'>Transaction</span>
-							</a>
-							<ul class='site-menu-sub'>
-																<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/masuk' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-										Incoming Goods
-										</span>
-									</a>
-								</li>
-																								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/keluar' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-										Outgoing Goods
-										</span>
-									</a>
-								</li>
-																								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/penyesuaian' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-											Adjustment
-										</span>
-									</a>
-								</li>
-															</ul>
-						</li>
-												<li class='site-menu-item has-sub'>
-							<a href='javascript:void(0)' class='animsition-link'>
-								<span class='site-menu-arrow'></span>
-								<i class='site-menu-icon fa fa fa-bar-chart'></i>
-								<span class='site-menu-title'>Report</span>
-							</a>
-							<ul class='site-menu-sub'>
-								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/laporanmasuk' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-										Incoming Goods
-										</span>
-									</a>
-								</li>
-								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/laporankeluar' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-										Outgoing Goods
-										</span>
-									</a>
-								</li>
-								<li class='site-menu-item'>
-									<a href='http://localhost/wms/website/laporanpenyesuaian' class='animsition-link'>
-										<i class='site-menu-icon fa fa-angle-right'></i>
-										<span class='site-menu-title'>
-										 Adjustment
-										</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-											</ul>
-
-				</div>
-			</div>
-		</div>
-		<div class="site-menubar-footer">
-			<a href="http://localhost/wms/admin" class="fold-show" data-placement="top" data-toggle="tooltip" data-original-title="Dashboard">
-				<span class="icon wb-home" aria-hidden="true"></span>
-			</a>
-			<a href="http://localhost/wms/pengaturan/edit_password" data-placement="top" data-toggle="tooltip" data-original-title="Edit Password">
-				<span class="icon wb-lock" aria-hidden="true"></span>
-			</a>
-			<a href="http://localhost/wms/login/keluar" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
-				<span class="icon wb-power" aria-hidden="true"></span>
-			</a>
-		</div>
+		{% include 'partials/sidebar.html' %}
 	</div>
 
 	<!-- Content -->
@@ -341,97 +190,23 @@
     <div class="page-content container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Welcome to the Administrator's Panel</h3>
-                    </div>
-                    <div class="panel-body container-fluid">
-                        <div class="blockquote gray">
-                            <h3>Hello,
-                                Patrick Ndimukulaga                            </h3>
-                            <p>This information is for administrators or staff to run the data within the system.</p>
-	<!-- <div style="margin-top: 20px;" class='onesignal-customlink-container'></div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-3 col-xs-6">
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <h3>
-                                    6                                </h3>
-                                <p>Incoming Goods</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-archive"></i>
-                            </div>
-                            <a href="http://localhost/wms/website/masuk" class="small-box-footer">
-                            View Incoming Goods
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-3 col-xs-6">
-                        <div class="small-box bg-red">
-                            <div class="inner">
-                                <h3>
-                                    4                                </h3>
-                                <p>Outgoing Goods</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-archive"></i>
-                            </div>
-                            <a href="http://localhost/wms/website/keluar" class="small-box-footer">
-                            View Outgoing Goods
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
+                
+                {% block content %}
 
-                    <div class="col-lg-3 col-sm-3 col-xs-6">
-                        <div class="small-box bg-warning">
-                            <div class="inner">
-                                <h3>
-                                    6                                </h3>
-                                <p>Suppliers</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-th-large"></i>
-                            </div>
-                            <a href="http://localhost/wms/website/supplier" class="small-box-footer">
-                            View Suppliers Info
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-3 col-xs-6">
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <h3>
-                                    9                                </h3>
-                                <p>Customers</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <a href="http://localhost/wms/website/customer" class="small-box-footer">
-                            View Customers Info
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
+                {% endblock %}
+                    
+                       
             </div>
         </div>
     </div>
 </div>	<!-- End Content -->
 
 	<footer class="site-footer">
-		<span class="site-footer-legal">© 2022			WMS PHP		</span>
+		<span class="site-footer-legal">© 2022			WMS 	</span>
 		<div class="site-footer-right">
 			Developed by
-			Ali Abdul Wahid		</div>
+			PN		</div>
 	</footer>
 
 	<script>
