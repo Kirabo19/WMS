@@ -89,26 +89,18 @@
 	<link rel="stylesheet" href="{% static 'css/slidePanel.css'%}">
 	<link rel="stylesheet" href="{% static 'css/flag-icon.css'%}">
 
-	<link rel="stylesheet" href="http://localhost/wms/templates/backend/assets/libs/formvalidation/formValidation.css">
+	<link rel="stylesheet" href="{% static 'css/formValidation.css'%}">
 
 	<!-- Fonts -->
-	<link rel="stylesheet" href="http://localhost/wms/templates/backend/assets/fonts/web-icons/web-icons.min.css">
-	<link rel="stylesheet" href="http://localhost/wms/templates/backend/assets/fonts/brand-icons/brand-icons.min.css">
-	<link rel="stylesheet" href="http://localhost/wms/templates/backend/assets/fonts/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'css/web-icons.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/brand-icons.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
 
-	<script src="http://localhost/wms/templates/backend/assets/libs/jquery/jquery.js"></script>
-	<!--[if lt IE 9]>
-    <script src="../../http://localhost/wms/templates/admin/assets/libs/html5shiv/html5shiv.min.js"></script>
-    <![endif]-->
-
-	<!--[if lt IE 10]>
-    <script src="../../http://localhost/wms/templates/admin/assets/libs/media-match/media.match.min.js"></script>
-    <script src="../../http://localhost/wms/templates/admin/assets/libs/respond/respond.min.js"></script>
-    <![endif]-->
-
+	<script src="{% static 'js/jquery.js'%}"></script>
+	
 	<!-- Scripts -->
-	<script src="http://localhost/wms/templates/backend/assets/libs/modernizr/modernizr.js"></script>
-	<script src="http://localhost/wms/templates/backend/assets/libs/breakpoints/breakpoints.js"></script>
+	<script src="{% static 'js/modernizr.js'%}"></script>
+	<script src="{% static 'js/breakpoints.js'%}"></script>
 	<script>
 		Breakpoints();
 	</script>
@@ -126,9 +118,9 @@
 				<i class="icon wb-more-horizontal" aria-hidden="true"></i>
 			</button>
 			<div class="navbar-brand navbar-brand-center">
-				<img class="navbar-brand-logo" src="http://localhost/wms/assets/3691adaa4a69024b73dc5c1ddb3c43ea.png" title="Remark">
+				<img class="navbar-brand-logo" src="{% static 'img/3691adaa4a69024b73dc5c1ddb3c43ea.png'%}" title="Remark">
 				<span class="navbar-brand-text">
-					WMS PHP				</span>
+					WMS 			</span>
 			</div>
 		</div>
 
@@ -163,7 +155,7 @@
 						<a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false" data-animation="slide-bottom"
 						    role="button">
 							<span class="avatar avatar-online">
-								<img src="http://localhost/wms/templates/backend/assets/images/avatar/avatar.jpg" alt="...">
+								<img src="{% static 'img/avatar.jpg'%}" alt="...">
 								<i></i>
 							</span>
 						</a>
