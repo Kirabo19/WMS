@@ -154,7 +154,7 @@
 						<a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false" data-animation="slide-bottom"
 						    role="button">
 							<span class="avatar avatar-online">
-								<img src="http://localhost/wms/templates/backend/assets/images/avatar/avatar.jpg" alt="...">
+								<img src="{% static 'img/avatar.jpg'%}" alt="...">
 								<i></i>
 							</span>
 						</a>
@@ -346,12 +346,13 @@
 							
 						</div>
 					</div>
-					
+					{% block content %}
+
 						
 	
 						
 	
-						
+					{% endblock %}	
 						</div>
 					</div>
 				</div>
