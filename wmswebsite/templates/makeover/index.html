@@ -15,8 +15,52 @@
 					
 					<div class="panel-body container-fluid">
 						
-<form action="" method="post">
+<form action="{% url 'makeover' %}" method="post" enctype="multipart/form-data" id="exampleStandardForm" autocomplete="off">
 
+	<input type="hidden" name="identitas_id" value="1" />
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Website Name</label>
+		<input type="text" class="form-control input-sm" id="identitas_website" name="identitas_website" placeholder="Enter Website Name"
+		value="WMS PHP" required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Website Description</label>
+		<input type="text" class="form-control input-sm" id="identitas_deskripsi" name="identitas_deskripsi" placeholder="Enter Website Description"
+		value="Warehouse Management System " required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Keyword Website</label>
+		<input type="text" class="form-control input-sm" id="identitas_keyword" name="identitas_keyword" placeholder="Enter Keyword Website"
+		value="Warehouse Management System " required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Email Website</label>
+		<input type="text" class="form-control input-sm" id="identitas_email" name="identitas_email" placeholder="Enter Email Website"
+		value="wms@gmail.com" required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Facebook URL</label>
+		<input type="text" class="form-control input-sm" id="identitas_fb" name="identitas_fb" placeholder="Enter Facebook URL"
+		value="https://www.facebook.com/wms" required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Twitter URL</label>
+		<input type="text" class="form-control input-sm" id="identitas_tw" name="identitas_tw" placeholder="Enter Twitter URL"
+		value="https://twitter.com/wms" required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Google Plus URL</label>
+		<input type="text" class="form-control input-sm" id="identitas_gp" name="identitas_gp" placeholder="Enter Google Plus URL"
+		value="http://wms.com/" required />
+	</div>
+	<div class="form-group form-material">
+		<label class="control-label" for="inputText">Youtube</label>
+		<input type="text" class="form-control input-sm" id="identitas_yb" name="identitas_yb" placeholder="Enter Channel Link"
+		value="https://www.youtube.com/wms" required />
+	</div>
+	<div class='button center'>
+		<input class="btn btn-success btn-sm" type="submit" name="simpan" value="Add Data" id="validateButton2">
+	</div>
 
 </form>						
 						
@@ -28,4 +72,30 @@
 </div>
 </div>
 </div>
+
+<script>
+	(function (document, window, $) {
+		'use strict';
+		var Site = window.Site;
+		$(document).ready(function ($) {
+			Site.run();
+		});
+
+		(function () {
+			$('#exampleStandardForm').formValidation({
+				framework: "bootstrap",
+				button: {
+					selector: '#validateButton2',
+					disabled: 'disabled'
+				},
+				icon: null,
+			});
+		})();
+
+		(function () {
+			$('.summary-errors').hide()
+		})();
+	})(document, window, jQuery);
+</script>
+
 {% endblock %}	
