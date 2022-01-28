@@ -18,7 +18,7 @@
 <!-- section for changes -->
 
 <form action="{% url 'makeover' %}" method="post" enctype="multipart/form-data" id="exampleStandardForm" autocomplete="off">
-
+    {% csrf_token %}
 	<input type="hidden" name="identitas_id" value="1" />
 	<div class="form-group form-material">
 		<label class="control-label" for="inputText">Website Name</label>

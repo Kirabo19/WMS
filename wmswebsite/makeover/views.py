@@ -1,14 +1,25 @@
-from django.shortcuts import render
-from models import makeover
+from django.shortcuts import render, redirect
+from .models import makeover
+from django.contrib import messages
+
 
 
 # Create your views here.
 def index(request):
-    update_makeover = makeover.objects.all()
-    context = {
-        'update_makeover':update_makeover
-    }
-    return render(request, 'makeover/index.html', update_makeover) 
+    
+    if request.method == 'GET':
+       return render(request, 'makeover/index.html') 
+     
+    if request.method == 'POST':
+       website = request.POST['website']
+       description = request.POST['description']
+       keyword = request.POST['keyword']
+       i_email = request.POST['i_email']
+       fb = request.POST['fb']
+       tw = request.POST['tw']
+       yb = request.POST['yb']
 
-def add_system(request):
-    return render(request, 'makeover/add_system.html')
+  
+    makeover.objects.create(website=website, description=description, keyword=keyword, i_email=i_email,fb=fb, tw=tw, yb=yb )
+    messages.success(request,'Success')
+    return redirect('makeover')
