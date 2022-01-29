@@ -21,5 +21,5 @@ def index(request):
 
   
     makeover.objects.create(website=website, description=description, keyword=keyword, i_email=i_email,fb=fb, tw=tw, yb=yb )
-    messages.success(request,'Success')
+    messages.success(request,'Data has Successfully been edited!')
     return redirect('makeover')
