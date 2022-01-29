@@ -22,20 +22,22 @@
 	
 	{% csrf_token %}
 	<input type="hidden" name="identitas_id" value="1" />
+	{% for makeover in edit_makeover %}
 	<div class="form-group form-material">
 		<label class="control-label" for="inputText">Website Name</label>
 		<input type="text" class="form-control input-sm" id="website" name="website" placeholder="Enter Website Name"
-		value="WMS PHP" required />
+		value="{{makeover.website}}" required />
+		
 	</div>
 	<div class="form-group form-material">
 		<label class="control-label" for="inputText">Website Description</label>
 		<input type="text" class="form-control input-sm" id="description" name="description" placeholder="Enter Website Description"
-		value="Warehouse Management System " required />
+		value="{{makeover.description}} " required />
 	</div>
 	<div class="form-group form-material">
 		<label class="control-label" for="inputText">Keyword Website</label>
 		<input type="text" class="form-control input-sm" id="keyword" name="keyword" placeholder="Enter Keyword Website"
-		value="Warehouse Management System " required />
+		value="{{makeover.keyword}} " required />
 	</div>
 	<div class="form-group form-material">
 		<label class="control-label" for="inputText">Email Website</label>
@@ -62,6 +64,7 @@
 		<input type="text" class="form-control input-sm" id="yb" name="yb" placeholder="Enter Channel Link"
 		value="https://www.youtube.com/wms" required />
 	</div>
+	{% endfor %}
 	<div class='button center'>
 		<input class="btn btn-success btn-sm" type="submit" name="simpan" value="Add Data" id="validateButton2">
 	</div>
