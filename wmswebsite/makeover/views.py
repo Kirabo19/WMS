@@ -12,7 +12,6 @@ def index(request):
        'edit_makeover': edit_makeover
 
     }
-
     if request.method == 'GET':
        return render(request, 'makeover/index.html', context) 
      
