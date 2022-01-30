@@ -5,8 +5,8 @@ from django.contrib import messages
 
 
 # Create your views here.
-def index(request, id):
-    edit_makeover = makeover.objects.get(pk=id)
+def index(request):
+    
     edit_makeover = makeover.objects.all()
     context = {
        'edit_makeover': edit_makeover
@@ -16,16 +16,15 @@ def index(request, id):
        return render(request, 'makeover/index.html', context) 
      
     if request.method == 'POST':
-     
-     edit_makeover.website = website
-     edit_makeover.description = description
-     edit_makeover.keyword = keyword
-     edit_makeover.i_email = i_email
-     edit_makeover.fb = fb
-     edit_makeover.tw = tw
-     edit_makeover.yb = yb
+       website = request.POST['website']
+       description = request.POST['description']
+       keyword = request.POST['keyword']
+       i_email = request.POST['i_email']
+       fb = request.POST['fb']
+       tw = request.POST['tw']
+       yb = request.POST['yb']
 
   
-     edit_makeover.save()
-     messages.success(request,'Data has Successfully been edited!')
-     return redirect('makeover')
+    makeover.objects.create(website=website, description=description, keyword=keyword, i_email=i_email,fb=fb, tw=tw, yb=yb )
+    messages.success(request,'Data has Successfully been edited!')
+    return redirect('makeover')
