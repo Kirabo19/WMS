@@ -1,4 +1,4 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 {% block content %}
 <div class="page">
     <div class="page-title blue">
@@ -40,7 +40,7 @@
                                     </div>
                                     <div class='btn-navigation'>
                                         <div class='pull-right'>
-                                            <a class="btn btn-success" href="http://localhost/wms/pengaturan/pengguna">
+                                            <a class="btn btn-success" href="#">
                                                 <i class="fa fa-refresh"></i>
                                             </a>
                                         </div>
@@ -73,10 +73,10 @@
                                                 <b>Last modified:</b>
                                                 01 February 2019 22:19                                            </td>
                                             <td class="text-center action">
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/admin">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-close"></i>
                                                 </a>
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/admin">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-pencil"></i>
                                                 </a>
                                             </td>
@@ -96,10 +96,10 @@
                                                 <b>Last modified:</b>
                                                 05 February 2019 16:54                                            </td>
                                             <td class="text-center action">
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/admincustomer">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-close"></i>
                                                 </a>
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/admincustomer">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-pencil"></i>
                                                 </a>
                                             </td>
@@ -119,10 +119,10 @@
                                                 <b>Last modified:</b>
                                                 05 February 2019 16:54                                            </td>
                                             <td class="text-center action">
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/adminsupplier">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-close"></i>
                                                 </a>
-                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/adminsupplier">
+                                                                                                <a class="btn-update" href="#">
                                                     <i class="icon wb-pencil"></i>
                                                 </a>
                                             </td>
@@ -148,7 +148,7 @@
             </div>
         </div>
     </div>
-        <a href="http://localhost/wms/pengaturan/pengguna/tambah">
+        <a href="#">
         <button class="site-action btn-raised btn btn-sm btn-floating blue" type="button">
             <i class="icon wb-plus" aria-hidden="true"></i>
         </button>
@@ -180,4 +180,4 @@
 
 <!-- ================================================== TAMBAH ================================================== -->
 	<!-- End Content -->
-{% end block %}
+{% endblock %}
