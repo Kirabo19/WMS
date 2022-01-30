@@ -1,0 +1,183 @@
+{% extend 'base.html' %}
+{% block content %}
+<div class="page">
+    <div class="page-title blue">
+        <h3>
+            User        </h3>
+        <p>Information About
+            User        </p>
+    </div>
+    <div class="page-content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">View Data
+                            User                        </h5>
+                    </div>
+                    <!-- ========== Flashdata ========== -->
+                                        <!-- ========== End Flashdata ========== -->
+                    <div class="panel-body container-fluid table-detail">
+                        <div class="table-full table-view">
+                                                        <div class="navigation-btn">
+                                <form action="" method="post" id="form">
+                                    <div class='row margin-bottom'>
+                                        <div class='btn-search'>Search By :</div>
+                                        <div class='col-md-3 col-sm-12'>
+                                            <div class='button-search'>
+                                                <select name='cari' id='cari' onChange='' class='form-control'><option value=''></option><option value='admin_user'>USERNAME</option><option value='admin_nama' selected>FULL NAME</option><option value='admin_telepon'>TELEPHONE</option><option value='admin_level_kode'>GROUP</option></select>                                            </div>
+                                        </div>
+                                        <div class='col-md-3 col-sm-12 select-search'>
+                                            <div class="input-group">
+                                                <input type="text" name="q" class="form-control" value="" />
+                                                <span class="input-group-btn">
+                                                    <button type="submit" name="kirim" class="btn btn-success" type="button">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='btn-navigation'>
+                                        <div class='pull-right'>
+                                            <a class="btn btn-success" href="http://localhost/wms/pengaturan/pengguna">
+                                                <i class="fa fa-refresh"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                                                                                    <div class="table-responsive">
+                                <table class="table table-hover table-striped table-bordered">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>Full name</th>
+                                        <th>Username</th>
+                                        <th>Group</th>
+                                        <th width=270>Date</th>
+                                        <th class="text-center">Action</th>
+                                    </thead>
+                                    <tbody>
+                                                                                <tr>
+                                            <td>
+                                                1                                            </td>
+                                            <td>
+                                                Patrick Ndimukulaga                                            </td>
+                                            <td>
+                                                admin                                            </td>
+                                            <td>
+                                                Administrator                                            </td>
+                                            <td>
+                                                <b>Created:</b>
+                                                01 February 2019 22:19                                                <br>
+                                                <b>Last modified:</b>
+                                                01 February 2019 22:19                                            </td>
+                                            <td class="text-center action">
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/admin">
+                                                    <i class="icon wb-close"></i>
+                                                </a>
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/admin">
+                                                    <i class="icon wb-pencil"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                                                                <tr>
+                                            <td>
+                                                2                                            </td>
+                                            <td>
+                                                Admin Customer                                            </td>
+                                            <td>
+                                                admincustomer                                            </td>
+                                            <td>
+                                                Staff Customer                                            </td>
+                                            <td>
+                                                <b>Created:</b>
+                                                05 February 2019 16:54                                                <br>
+                                                <b>Last modified:</b>
+                                                05 February 2019 16:54                                            </td>
+                                            <td class="text-center action">
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/admincustomer">
+                                                    <i class="icon wb-close"></i>
+                                                </a>
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/admincustomer">
+                                                    <i class="icon wb-pencil"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                                                                <tr>
+                                            <td>
+                                                3                                            </td>
+                                            <td>
+                                                Admin Supplier                                            </td>
+                                            <td>
+                                                adminsupplier                                            </td>
+                                            <td>
+                                                Staff Supplier                                            </td>
+                                            <td>
+                                                <b>Created:</b>
+                                                05 February 2019 16:54                                                <br>
+                                                <b>Last modified:</b>
+                                                05 February 2019 16:54                                            </td>
+                                            <td class="text-center action">
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/reject/adminsupplier">
+                                                    <i class="icon wb-close"></i>
+                                                </a>
+                                                                                                <a class="btn-update" href="http://localhost/wms/pengaturan/pengguna/edit/adminsupplier">
+                                                    <i class="icon wb-pencil"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                                                            </tbody>
+                                </table>
+                            </div>
+                            <div class="wrapper">
+                                <div class="paging">
+                                    <div id='pagination'>
+                                        <div class='pagination-right'>
+                                            <ul class="pagination">
+                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total">Total :
+                                    3                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a href="http://localhost/wms/pengaturan/pengguna/tambah">
+        <button class="site-action btn-raised btn btn-sm btn-floating blue" type="button">
+            <i class="icon wb-plus" aria-hidden="true"></i>
+        </button>
+    </a>
+    </div>
+<!-- ========== Modal Konfirmasi ========== -->
+<div id="modal-konfirmasi" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Conformation</h4>
+            </div>
+
+            <div class="modal-body" style="background:#d9534f;color:#fff">
+            Are you sure you want to delete this data?
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-danger" id="hapus-pengguna">Yes</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========== End Modal Konfirmasi ========== -->
+<!-- ================================================== END VIEW ================================================== -->
+
+<!-- ================================================== TAMBAH ================================================== -->
+	<!-- End Content -->
+{% end block %}
