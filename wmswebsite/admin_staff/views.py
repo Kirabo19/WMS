@@ -7,5 +7,5 @@ def index(request):
      return render(request, 'admin_staff/index.html')
 
 
-def adduser(request):    
+def add_user(request):    
      return render(request, 'admin_staff/adduser.html')
