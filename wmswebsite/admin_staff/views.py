@@ -4,7 +4,12 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-     return render(request, 'admin_staff/index.html')
+     admin_users = admin_staff.objects.all()
+
+     Context = {
+          'admin_users': admin_users
+     }
+     return render(request, 'admin_staff/index.html', Context)
 
 
 def add_user(request):  
@@ -25,3 +30,16 @@ def add_user(request):
 
     messages.success(request, 'New user has been added successfully!') 
     return redirect('admin_staff')   
+
+def edit_user(request, id):
+     adminusers = admin_staff.objects.get(pk=id)
+     context ={
+          'adminusers': adminusers
+     }
+     if request.method=='GET':
+     
+       
+        return render(request, 'admin_staff/edituser.html', context)
+     else:
+
+        return render(request, 'admin_staff/edituser.html', context)

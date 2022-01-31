@@ -48,7 +48,7 @@
                                     </div>
                                 </form>
                             </div>
-                                                                                    <div class="table-responsive">
+                            <div class="table-responsive">
                                 <table class="table table-hover table-striped table-bordered">
                                     <thead>
                                         <th>#</th>
@@ -59,21 +59,18 @@
                                         <th class="text-center">Action</th>
                                     </thead>
                                     <tbody>
+                                        {% for adminusers in admin_users %}
                                         <tr>
-                                            <td>1</td>
-                                            <td>Patrick Ndimukulaga</td>
-                                            <td>admin</td>
-                                            <td>Administrator</td>
-                                            <td>
-                                                <b>Created:</b>
-                                                01 February 2019 22:19<br>
-                                                <b>Last modified:</b>
-                                                01 February 2019 22:19</td>
-                                            <td class="text-center action"> <a class="btn-update" href="#"> <i class="icon wb-close"></i> </a>
+                                            <td>{{adminusers.id}} </td>
+                                            <td>{{adminusers.admin_name}} </td>
+                                            <td>{{adminusers.admin_user}} </td>
+                                            <td>{{adminusers.admin_group}} </td>
+                                            <td>{{adminusers.admin_date}} </td>
+                                            <td class="text-center action"> <a class="btn-update" href="{% url 'edituser' adminusers %} "> <i class="icon wb-close"></i> </a>
                                                                             <a class="btn-update" href="#"> <i class="icon wb-pencil"></i></a>
                                             </td>
                                         </tr>
-                                                                              
+                                       {% endfor %}                                       
                                                                               
                                  </tbody>
                                 </table>
