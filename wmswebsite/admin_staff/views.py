@@ -31,7 +31,7 @@ def add_user(request):
     messages.success(request, 'New user has been added successfully!') 
     return redirect('admin_staff')   
 
-
+# Add or Save funtion
 def edit_user(request, id):
      adminusers = admin_staff.objects.get(pk=id)
      context ={
@@ -61,6 +61,13 @@ def edit_user(request, id):
           adminusers.save()
           messages.success(request, 'User has been edited successfully!,')
 
+          return redirect('admin_staff')
 
+# Delete function
+def delete_user(request, id):
+     adminusers = admin_staff.objects.get(pk=id)
+     adminusers.delete()
+     messages.success(request, 'The user has been succussfuly blocked!,') 
+     return redirect(admin_staff)
+          
 
-     return render(request, 'admin_staff')

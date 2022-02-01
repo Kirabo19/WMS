@@ -6,5 +6,7 @@ urlpatterns = [
 
     path('/add-user',views.add_user, name="add-user"),
 
-    path('edituser/<int:id>',views.edit_user, name="edituser")
+    path('edituser/<int:id>',views.edit_user, name="edituser"),
+
+    path('delete_user/<int:id>',views.delete_user, name="delete_user")
 ]
