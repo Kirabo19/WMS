@@ -31,15 +31,36 @@ def add_user(request):
     messages.success(request, 'New user has been added successfully!') 
     return redirect('admin_staff')   
 
+
 def edit_user(request, id):
      adminusers = admin_staff.objects.get(pk=id)
      context ={
-          'adminusers': adminusers
+          'adminusers': adminusers,
+          'values' : adminusers,
      }
      if request.method=='GET':
      
        
         return render(request, 'admin_staff/edituser.html', context)
-     else:
+        
+     if request.method=='POST':
+          admin_user = request.POST['admin_user']
+          admin_password = request.POST['admin_password']
+          admin_name = request.POST['admin_name']
+          admin_address = request.POST['admin_address']
+          admin_phone = request.POST['admin_phone']
+          admin_group = request.POST['admin_group']
+          
+          adminusers.admin_user = admin_user
+          adminusers.admin_password = admin_password
+          adminusers.admin_name = admin_name
+          adminusers.admin_address = admin_address
+          adminusers.admin_phone = admin_phone
+          adminusers.admin_group = admin_group
 
-        return render(request, 'admin_staff/edituser.html', context)
+          adminusers.save()
+          messages.success(request, 'User has been edited successfully!,')
+
+
+
+     return render(request, 'admin_staff')
