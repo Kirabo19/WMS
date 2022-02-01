@@ -65,10 +65,10 @@ def edit_user(request, id):
 
 # Delete function
 def delete_user(request, id):
-     adminusers = admin_staff.objects.get(pk=id)
-     adminusers.delete()
-     messages.success(request, 'The user has been succussfuly blocked!,') 
+    adminusers = admin_staff.objects.get(pk=id)
+    adminusers.delete()
+    messages.success(request, 'The user has been succussfuly blocked!,') 
      
-     return redirect('admin_staff')
+    return redirect('admin_staff')
           
 
