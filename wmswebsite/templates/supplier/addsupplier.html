@@ -17,18 +17,19 @@
                         <h5 class="panel-title">Add Supplier</h5>
                     </div>
                     <div class="panel-body container-fluid">
-                        <form action="http://localhost/wms/website/supplier/tambah" method="post" id="exampleStandardForm" autocomplete="off">
+                        <form action="{% url 'add_supplier' %} " method="post" id="exampleStandardForm" autocomplete="off">
+                            {% csrf_token %}
                             <div class="form-group form-material">
                                 <label class="control-label" for="inputText">Name</label>
-                                <input type="text" class="form-control input-sm" id="nama_supplier" name="nama_supplier" placeholder="Supplier Name" required/>
+                                <input type="text" class="form-control input-sm" id="nama_supplier" name="supplier_name" placeholder="Supplier Name" required/>
                             </div>
                             <div class="form-group form-material">
                                 <label class="control-label" for="inputText">Address</label>
-                                <input type="text" class="form-control input-sm" id="alamat_supplier" name="alamat_supplier" placeholder="Address" required/>
+                                <input type="text" class="form-control input-sm" id="alamat_supplier" name="supplier_address" placeholder="Address" required/>
                             </div>
                             <div class="form-group form-material">
                                 <label class="control-label" for="inputText">Telephone Number</label>
-                                <input type="text" class="form-control input-sm" id="notelp_supplier" name="notelp_supplier" placeholder="Telephone Number" required/>
+                                <input type="text" class="form-control input-sm" id="notelp_supplier" name="supplier_phone" placeholder="Telephone Number" required/>
                             </div>
                             <div class='button center'>
                                 <input class="btn btn-success btn-sm" type="submit" name="simpan" value="Add Data" id="validateButton2">
