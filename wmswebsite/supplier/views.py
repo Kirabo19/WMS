@@ -32,10 +32,10 @@ def add_supplier(request):
 
 # Edit function 
 def edit_supplier(request, id):
-
-    edit_supps = supplier.objects.all()
+    edit_supps = supplier.objects.all(pk=id)
     context = {
-        'edit_supps': edit_supps
+        'edit_supps': edit_supps,
+        'values': edit_supps
     }
     if request.method == 'GET':
        return render(request,'supplier/editsupplier.html', context)
@@ -45,3 +45,12 @@ def edit_supplier(request, id):
        supplier_address = request.POST['supplier_address']
        supplier_phone = request.POST['supplier_phone']
 
+       edit_supps.supplier_name = supplier_name
+       edit_supps.supplier_address = supplier_address
+       edit_supps.supplier_phone = supplier_phone
+
+       edit_supps.save()
+       messages.success(request, 'Supplier has been succussfully edited!,')
+      
+      # return redirect('supplier')
+       return redirect('supplier')

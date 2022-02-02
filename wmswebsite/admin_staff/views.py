@@ -11,7 +11,7 @@ def index(request):
      }
      return render(request, 'admin_staff/index.html', Context)
 
-
+# Add Function
 def add_user(request):  
 
     if request.method == 'GET':   
@@ -31,7 +31,7 @@ def add_user(request):
     messages.success(request, 'New user has been added successfully!') 
     return redirect('admin_staff')   
 
-# Add or Save funtion
+# Edit funtion
 def edit_user(request, id):
      adminusers = admin_staff.objects.get(pk=id)
      context ={
