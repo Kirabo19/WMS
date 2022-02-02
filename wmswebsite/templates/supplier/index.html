@@ -58,118 +58,29 @@
                                             <th width=270>Date</th>
                                                                         <th class="text-center">Action</th>
                                                                     </thead>
-                                        <tbody>
-                                                                                    <tr>
-                                                <td>
-                                                    1                                            </td>
-                                                <td>
-                                                    Avant Suppliers                                            </td>
-                                                <td>
-                                                    440 Enim St                                            </td>
-                                                <td>
-                                                    04550010                                            </td>
-                                                <td>
-                                                    <b>Created:</b> 19 January 2022 17:39<br>
-                                                    <b>Last updated:</b> 19 January 2022 17:39                                </td>
-                                                                            <td class="text-center action">
-                                                    <a class="btn-update" href="http://localhost/wms/website/supplier/edit/4">
-                                                        <i class="icon wb-pencil"></i>
+                                <tbody>
+                                    {% for supplies in suppliers %}
+                                    <tr>
+                                        <td>{{supplies.id}}</td>
+                                        <td>{{supplies.supplier_name}} </td>
+                                        <td>{{supplies.supplier_address}} </td>
+                                        <td>{{supplies.supplier_phone}} </td>
+                                        <td>
+                                            <b>Created:</b>{{supplies.supplier_created}} <br>
+                                            <b>Last updated:</b>{{supplies.supplier_updated}}                              
+                                        </td>
+                                        <td class="text-center action">
+                                            <a class="btn-update" href="http://localhost/wms/website/supplier/edit/4">
+                                            <i class="icon wb-pencil"></i>
                                                     </a>
-                                                    <a class="btn-delete" href="javascript:;" data-id="4" data-toggle="modal" data-target="#modal-konfirmasi"
+                                           <a class="btn-delete" href="javascript:;" data-id="4" data-toggle="modal" data-target="#modal-konfirmasi"
                                                         title="Avant Suppliers">
                                                         <i class="icon wb-trash"></i>
                                                     </a>
-                                                </td>
-                                                                        </tr>
-                                                                                    <tr>
-                                                <td>
-                                                    2                                            </td>
-                                                <td>
-                                                    Pegasus Suppliers                                            </td>
-                                                <td>
-                                                    5514 Eros Avenue                                            </td>
-                                                <td>
-                                                    40145550                                            </td>
-                                                <td>
-                                                    <b>Created:</b> 19 January 2022 17:40<br>
-                                                    <b>Last updated:</b> 19 January 2022 17:40                                </td>
-                                                                            <td class="text-center action">
-                                                    <a class="btn-update" href="http://localhost/wms/website/supplier/edit/5">
-                                                        <i class="icon wb-pencil"></i>
-                                                    </a>
-                                                    <a class="btn-delete" href="javascript:;" data-id="5" data-toggle="modal" data-target="#modal-konfirmasi"
-                                                        title="Pegasus Suppliers">
-                                                        <i class="icon wb-trash"></i>
-                                                    </a>
-                                                </td>
-                                                                        </tr>
-                                                                                    <tr>
-                                                <td>
-                                                    3                                            </td>
-                                                <td>
-                                                    QWER Suppliers                                            </td>
-                                                <td>
-                                                    7741 D Street                                            </td>
-                                                <td>
-                                                    41000140                                            </td>
-                                                <td>
-                                                    <b>Created:</b> 20 January 2022 11:19<br>
-                                                    <b>Last updated:</b> 20 January 2022 11:19                                </td>
-                                                                            <td class="text-center action">
-                                                    <a class="btn-update" href="http://localhost/wms/website/supplier/edit/6">
-                                                        <i class="icon wb-pencil"></i>
-                                                    </a>
-                                                    <a class="btn-delete" href="javascript:;" data-id="6" data-toggle="modal" data-target="#modal-konfirmasi"
-                                                        title="QWER Suppliers">
-                                                        <i class="icon wb-trash"></i>
-                                                    </a>
-                                                </td>
-                                                                        </tr>
-                                                                                    <tr>
-                                                <td>
-                                                    4                                            </td>
-                                                <td>
-                                                    Ultimate Suppliers                                            </td>
-                                                <td>
-                                                    550 Allace Avenue                                            </td>
-                                                <td>
-                                                    01478500                                            </td>
-                                                <td>
-                                                    <b>Created:</b> 19 January 2022 17:37<br>
-                                                    <b>Last updated:</b> 19 January 2022 17:37                                </td>
-                                                                            <td class="text-center action">
-                                                    <a class="btn-update" href="http://localhost/wms/website/supplier/edit/2">
-                                                        <i class="icon wb-pencil"></i>
-                                                    </a>
-                                                    <a class="btn-delete" href="javascript:;" data-id="2" data-toggle="modal" data-target="#modal-konfirmasi"
-                                                        title="Ultimate Suppliers">
-                                                        <i class="icon wb-trash"></i>
-                                                    </a>
-                                                </td>
-                                                                        </tr>
-                                                                                    <tr>
-                                                <td>
-                                                    5                                            </td>
-                                                <td>
-                                                    Verion Supplies                                            </td>
-                                                <td>
-                                                    558 Black Street                                            </td>
-                                                <td>
-                                                    01478540                                            </td>
-                                                <td>
-                                                    <b>Created:</b> 19 January 2022 17:38<br>
-                                                    <b>Last updated:</b> 19 January 2022 17:38                                </td>
-                                                                            <td class="text-center action">
-                                                    <a class="btn-update" href="#">
-                                                        <i class="icon wb-pencil"></i>
-                                                    </a>
-                                                    <a class="btn-delete" href="javascript:;" data-id="3" data-toggle="modal" data-target="#modal-konfirmasi"
-                                                        title="Verion Supplies">
-                                                        <i class="icon wb-trash"></i>
-                                                    </a>
-                                                </td>
-                                                                        </tr>
-                                                                                </tbody>
+                                       </td>
+                                    </tr>
+                                   {% endfor %}             
+                                </tbody>
                                     </table>
                                 </div>
                                 <div class="wrapper">
@@ -181,8 +92,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="total">Total :
-                                        5                                </div>
+                                   
+                                    <div class="total">Total : {{supps}} </div>
+                                       
                                 </div>
                             </div>
                         </div>
