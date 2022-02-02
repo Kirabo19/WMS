@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'makeover',
-    'admin_staff'
+    'admin_staff',
+    'supplier'
     
 ]
 
