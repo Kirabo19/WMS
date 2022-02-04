@@ -43,7 +43,7 @@
                                         </div>
                                         <div class='btn-navigation'>
                                             <div class='pull-right'>
-                                                <a class="btn btn-success" href="http://localhost/wms/website/supplier"><i class="fa fa-refresh"></i></a>
+                                                <a class="btn btn-success" href="{% url 'supplier' %} "><i class="fa fa-refresh"></i></a>
                                             </div>
                                         </div>
                                     </form>
@@ -70,7 +70,7 @@
                                             <b>Last updated:</b>{{supplies.supplier_updated}}                              
                                         </td>
                                         <td class="text-center action">
-                                            <a class="btn-update" href="{% url 'edit_supplier' edit_supps.id %}">
+                                            <a class="btn-update" href = "{% url 'edit_supplier' supplies.id %}">
                                             <i class="icon wb-pencil"></i>
                                                     </a>
                                            <a class="btn-delete" href="javascript:;" data-id="4" data-toggle="modal" data-target="#modal-konfirmasi"
