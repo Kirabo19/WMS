@@ -53,3 +53,11 @@ def edit_supplier(request, id):
        messages.success(request, 'Supplier has been succussfully edited!,')
       
        return redirect('supplier')
+
+# Delete function
+def delete_supplier(request, id):
+    supps = supplier.objects.get(pk=id)
+    supps.delete()
+    messages.success(request, 'The supplier has been successfully deleted!,')
+
+    return redirect('supplier')

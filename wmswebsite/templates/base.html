@@ -355,7 +355,7 @@
 			var id = div.data('id')
 			var modal = $(this)
 			modal.find('#hapus-pengguna').attr("href", "http://localhost/wms/pengaturan/pengguna/hapus/" + id);
-			modal.find('#hapus-supplier').attr("href", "http://localhost/wms/website/supplier/hapus/" + id);
+			modal.find('#hapus-supplier').attr("href", "#" + id);
 			modal.find('#hapus-customer').attr("href", "http://localhost/wms/website/customer/hapus/" + id);
 			modal.find('#hapus-barang').attr("href", "http://localhost/wms/website/barang/hapus/" + id);
 			modal.find('#hapus-masuk').attr("href", "http://localhost/wms/website/masuk/hapus/" + id);
