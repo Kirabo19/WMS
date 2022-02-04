@@ -1,2 +1,4 @@
 Warehouse Management System (Python Django)
+Warehouse Management System project in Python Dajngo focuses mainly on keeping track of the warehouse’s goods. Also, the system displays all the users with their respective details. In addition, the system allows managing suppliers and customers. Evidently, this project contains an admin panel with an employee panel as well. In an overview of this web application, an employee has a minor role and control over the system. He/she can manage personal profiles, view overall records. Here, an employee can list out incoming goods and goods section. However, the admin has the full right to set employee’s account. In short, an employee can only view records, but cannot make changes to them.
+
 ![Django](https://user-images.githubusercontent.com/96953173/152537638-5e609c42-fd35-4713-a5fe-65f626cd0579.png)
