@@ -20,5 +20,6 @@ urlpatterns = [
     path('',include('makeover.urls')),
     path('admin_staff',include('admin_staff.urls')),
     path('supplier', include('supplier.urls')),
+    path('customer',include('customer.urls')),
     path('admin/', admin.site.urls),
 ]

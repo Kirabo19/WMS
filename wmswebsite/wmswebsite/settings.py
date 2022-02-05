@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'makeover',
     'admin_staff',
-    'supplier'
+    'supplier',
+    'customer'
+
     
 ]
 

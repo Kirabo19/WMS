@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% block content %}
+<!-- Content -->
+	<!-- ================================================== VIEW ================================================== -->
+<div class="page">
+    <div class="page-title blue">
+        <h3>
+            Customer        </h3>
+        <p>Information About
+            Customer        </p>
+    </div>
+    <div class="page-content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Add Customer</h5>
+                    </div>
+                    <div class="panel-body container-fluid">
+                        <form action="{% url 'add_customer'%} " method="post" id="exampleStandardForm" autocomplete="off">
+                            {% csrf_token %}
+                            <div class="form-group form-material">
+                                <label class="control-label" for="inputText">Name</label>
+                                <input type="text" class="form-control input-sm" id="nama_customer" name="customer_name" placeholder="Customer name" required/>
+                            </div>
+                            <div class="form-group form-material">
+                                <label class="control-label" for="inputText">Address</label>
+                                <input type="text" class="form-control input-sm" id="alamat_customer" name="customer_address" placeholder="Address" required/>
+                            </div>
+                            <div class="form-group form-material">
+                                <label class="control-label" for="inputText">Tel. No</label>
+                                <input type="text" class="form-control input-sm" id="notelp_customer" name="customer_phone" placeholder="Tel. No" required/>
+                            </div>
+                            <div class='button center'>
+                                <input class="btn btn-success btn-sm" type="submit" name="simpan" value="Add Data" id="validateButton2">
+                                <input class="btn btn-danger btn-sm" type="reset" name="batal" value="Cancel" onclick="location.href='http://localhost/wms/website/customer'"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'customer'%} ">
+		<button class="site-action btn-raised btn btn-sm btn-floating blue" type="button">
+			<i class="icon wb-eye" aria-hidden="true"></i>
+		</button>
+	</a>
+</div>
+<!-- ================================================== END TAMBAH ================================================== -->
+
+<!-- ================================================== EDIT ================================================== -->
+	<!-- End Content -->
+{% endblock %}
